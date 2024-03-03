@@ -8,6 +8,7 @@ const Carousel = ({ currentIndex, images }) => {
           key={index}
           src={image}
           alt={`Slide ${index}`}
+          loading="lazy"
           className={`w-full h-full absolute top-0 transition-opacity duration-500 object-cover ease-in-out ${
             index === currentIndex ? "opacity-100" : "opacity-0"
           }`}
