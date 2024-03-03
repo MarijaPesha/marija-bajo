@@ -1,0 +1,72 @@
+#nav-link-section,
+#nav-contact-section {
+  flex-grow: 1;
+}
+
+#nav-logo-section,
+#nav-social-section {
+  flex-basis: calc(100% / 3);
+}
+
+#nav-social-section {
+  gap: 9rem;
+}
+#nav-logo-section {
+  justify-content: flex-start;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+main {
+  flex: 1;
+  position: relative;
+}
+
+.home-wrap {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: calc(100vh - 130px);
+}
+
+.carusel {
+  grid-area: 1 / 1 / 5 / 5;
+}
+.carusel-titel {
+  grid-area: 5 / 1 / 6 / 5;
+}
+.carusel-description {
+  grid-area: 1 / 5 / 6 / 7;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.carusel-description::-webkit-scrollbar {
+  display: none;
+}
+
+.reveal-text {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.reveal-text::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes animate-0 {
+  to {
+    color: blue;
+  }
+}
+
+@keyframes animate-1 {
+  to {
+    color: red;
+  }
+}
