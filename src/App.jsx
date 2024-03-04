@@ -5,7 +5,7 @@ import GetInTouch from "./pages/GetInTouch";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/marija-bajo">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
