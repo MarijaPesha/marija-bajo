@@ -32,7 +32,7 @@ const Home = () => {
     <div className="w-screen flex flex-col relative">
       <Nav />
       <main>
-        <div className="home-wrap box-border">
+        <div className="home-wrap flex flex-col sm:grid box-border">
           <Carousel currentIndex={currentIndex} images={images} />
           <div className="carusel-description px-6 py-12 overflow-auto scroll-smooth border-l border-gray-700">
             <TextGenerateEffect words={text} />

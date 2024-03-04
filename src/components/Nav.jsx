@@ -38,13 +38,13 @@ function Nav() {
       <Link
         to="/"
         id="nav-logo-section"
-        className="flex px-8 py-12 border-r border-gray-700 justify-center items-center font-bold text-xl uppercase hover:text-red-900 transition duration-300 ease-in-out"
+        className="flex px-4 py-6 sm:px-8 sm:py-12 border-r border-gray-700 justify-center items-center text-sm sm:font-bold sm:text-xl uppercase hover:text-red-900 transition duration-300 ease-in-out"
       >
         {transformedText}
       </Link>
       <div
         id="nav-social-section"
-        className="hidden md:flex px-8 py-12 border-r border-gray-700 justify-center items-center font-bold"
+        className="hidden md:flex px-4 py-6 sm:px-8 sm:py-12 border-r border-gray-700 justify-center items-center font-bold"
       >
         <a href={socialLinks.youtube} target="_blank">
           <FontAwesomeIcon
@@ -74,14 +74,14 @@ function Nav() {
       <Link
         to="/about"
         id="nav-link-section"
-        className="flex px-8 py-12 border-r border-gray-700 justify-center items-center font-bold hover:text-red-900 transition duration-300 ease-in-out"
+        className="flex px-4 py-6 sm:px-8 sm:py-12 border-r border-gray-700 justify-center items-center font-bold hover:text-red-900 transition duration-300 ease-in-out"
       >
         ABOUT
       </Link>
       <Link
         to="/get-in-touch"
         id="nav-contact-section"
-        className="flex px-8 py-12 justify-center items-center font-bold hover:text-red-900 transition duration-300 ease-in-out"
+        className="flex px-4 py-6 sm:px-8 sm:py-12 justify-center items-center font-bold hover:text-red-900 transition duration-300 ease-in-out"
       >
         GET IN TOUCH
       </Link>

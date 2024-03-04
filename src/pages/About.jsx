@@ -14,7 +14,7 @@ const About = () => {
   return (
     <div className="w-screen flex flex-col items-center justify-center overflow-hidden">
       <Nav />
-      <div className="w-screen h-screen calc-[100vh-130px] flex">
+      <div className="w-screen h-full sm:h-screen sm:calc-[100vh-130px] flex">
         <div
           className="hidden md:block w-[calc(100%/3)] md:w-[50%] 2xl:w-2/3 "
           style={containerStyle}
@@ -22,9 +22,9 @@ const About = () => {
         <MaskContainer
           revealText={
             <p className="mx-auto max-w-screen-lg text-center xl:text-xl font-bold text-base">
-              <span className="block text-5xl">...</span>
-              <br />
-              <br />
+              <span className="hidden sm:block text-5xl">...</span>
+              <br className="hidden sm:block" />
+              <br className="hidden sm:block" />
               Marija Bajo is a performing artist, dedicated to bringing creative
               concepts to life on stage. As an artist, her intention is to bring
               a fresh perspective to the classical and contemporary realms of
