@@ -34,7 +34,7 @@ const Home = () => {
       <main>
         <div className="home-wrap flex flex-col sm:grid box-border">
           <Carousel currentIndex={currentIndex} images={images} />
-          <div className="carusel-description px-6 py-12 overflow-auto scroll-smooth border-l border-gray-700">
+          <div className="carusel-description px-6 py-12 overflow-auto scroll-smooth sm:border-l sm:border-gray-700">
             <TextGenerateEffect words={text} />
           </div>
           <CaruselTitel isPlaying={isPlaying} />
