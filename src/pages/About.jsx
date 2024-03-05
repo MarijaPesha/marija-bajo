@@ -24,7 +24,6 @@ const About = () => {
             <p className="mx-auto max-w-screen-lg text-center xl:text-xl font-bold text-base">
               <span className="hidden sm:block text-5xl">...</span>
               <br className="hidden sm:block" />
-              <br className="hidden sm:block" />
               Marija Bajo is a performing artist, dedicated to bringing creative
               concepts to life on stage. As an artist, her intention is to bring
               a fresh perspective to the classical and contemporary realms of

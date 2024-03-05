@@ -3,9 +3,9 @@ import Nav from "../components/Nav";
 import Carousel from "../components/Carousel";
 import { TextGenerateEffect } from "../components/TextGenerateEffect";
 import CaruselTitel from "../components/CaruselTitel";
-import wall from "../assets/img/image01.jpg";
-import piano from "../assets/img/image02.jpg";
-import bullets from "../assets/img/image03.jpg";
+import wall from "../assets/img/image01r.jpg";
+import piano from "../assets/img/image02r.jpg";
+import bullets from "../assets/img/image03r.jpg";
 import { useCarousel } from "../hook/useCarousel";
 import "../App.css";
 
