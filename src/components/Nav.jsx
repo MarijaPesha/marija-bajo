@@ -19,7 +19,7 @@ function Nav() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
-    }, 8000);
+    }, 4500);
 
     setTransformedText(texts[currentIndex]);
 

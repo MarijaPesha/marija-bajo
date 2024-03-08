@@ -25,7 +25,7 @@ const Home = () => {
 
   const { isPlaying, currentIndex } = useCarousel({
     images,
-    slideInterval: 3000,
+    slideInterval: 4500,
   });
 
   return (
