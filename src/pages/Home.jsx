@@ -1,8 +1,8 @@
 import React from "react";
 import "../App.css";
-import wall from "../assets/img/image01r.jpg";
-import piano from "../assets/img/image02r.jpg";
-import bullets from "../assets/img/image03r.jpg";
+import wall from "../assets/img/home01.jpg";
+import piano from "../assets/img/home02.jpg";
+import bullets from "../assets/img/home03.jpg";
 import Carousel from "../components/Carousel";
 import CaruselTitel from "../components/CaruselTitel";
 import Nav from "../components/Nav";

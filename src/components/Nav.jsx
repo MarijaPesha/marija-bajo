@@ -1,4 +1,5 @@
 import { faLinkedin, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faUserPen } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -43,9 +44,9 @@ function Nav() {
       <Link
         to="/"
         id="nav-logo-section"
-        className="flex px-4 py-6 sm:px-8 sm:py-12 border-r border-gray-700 justify-center items-center text-sm sm:font-bold sm:text-xl uppercase hover:text-red-900 transition duration-300 ease-in-out"
+        className="flex px-4 py-6 sm:px-8 sm:py-12 border-r border-gray-700 justify-center items-center text-sm font-bold sm:text-xl uppercase hover:text-red-900 transition duration-300 ease-in-out"
       >
-        {transformedText}
+        <span className="block w-[115px] md:w-auto"> {transformedText}</span>
       </Link>
       <div
         id="nav-social-section"
@@ -80,17 +81,56 @@ function Nav() {
       <Link
         to="/about"
         id="nav-link-section"
-        className="flex px-4 py-6 sm:px-8 sm:py-12 border-r border-gray-700 justify-center items-center font-bold hover:text-red-900 transition duration-300 ease-in-out uppercase  whitespace-nowrap"
+        className="hidden md:flex px-4 py-6 sm:px-8 sm:py-12 border-r border-gray-700 justify-center items-center font-bold hover:text-red-900 transition duration-300 ease-in-out uppercase  whitespace-nowrap"
       >
         {nav.at(1)}
       </Link>
       <Link
         to="/get-in-touch"
         id="nav-contact-section"
-        className="flex px-4 py-6 sm:px-8 sm:py-12 justify-center items-center font-bold hover:text-red-900 transition duration-300 ease-in-out uppercase"
+        className="hidden md:flex px-4 py-6 sm:px-8 sm:py-12 justify-center items-center font-bold hover:text-red-900 transition duration-300 ease-in-out uppercase"
       >
         {nav.at(2)}
       </Link>
+      <div className="flex w-full justify-center items-center gap-6 md:hidden">
+        <Link to="/about" className="block md:hidden">
+          <FontAwesomeIcon
+            size="lg"
+            icon={faUserPen}
+            style={{
+              color: "#bcbcbb",
+            }}
+          />
+        </Link>
+        <Link to="/get-in-touch" className="block md:hidden">
+          <FontAwesomeIcon
+            size="lg"
+            icon={faEnvelope}
+            style={{
+              color: "#bcbcbb",
+            }}
+          />
+        </Link>
+        <a href={socialLinks.youtube} target="_blank">
+          <FontAwesomeIcon
+            icon={faYoutube}
+            size="lg"
+            style={{
+              color: "#bcbcbb",
+            }}
+          />
+        </a>
+        <a href={socialLinks.linkedin} target="_blank">
+          <FontAwesomeIcon
+            icon={faLinkedin}
+            size="lg"
+            style={{
+              color: "#bcbcbb",
+            }}
+          />
+        </a>
+        <ToggleLanguage />
+      </div>
     </nav>
   );
 }
