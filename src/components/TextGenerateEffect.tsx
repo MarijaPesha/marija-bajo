@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";
+import React, { useEffect } from "react";
 import { cn } from "../utils/cn";
 
 export const TextGenerateEffect = ({
@@ -22,7 +22,7 @@ export const TextGenerateEffect = ({
         delay: stagger(0.05),
       }
     );
-  }, [scope.current]);
+  }, [scope.current, words]);
 
   const renderWords = () => {
     return (

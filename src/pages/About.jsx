@@ -1,16 +1,26 @@
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import "../App.css";
+import aboutPiano from "../assets/img/about_02.jpg";
 import Nav from "../components/Nav";
 import { MaskContainer } from "../components/SvgMaskEffect";
-import aboutPiano from "../assets/img/about_02.jpg";
-import "../App.css";
+import { translations } from "../data/translations";
+import { useLanguage } from "../store/LanguageContextProvider";
 
 const About = () => {
+  const { language } = useLanguage();
+
   const containerStyle = {
     backgroundImage: `url(${aboutPiano})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
   };
+
+  const aboutDescs = translations?.[language]?.about?.desc;
+  const aboutHidden = translations?.[language]?.about?.hidden;
+
   return (
     <div className="w-screen flex flex-col items-center justify-center overflow-hidden">
       <Nav />
@@ -21,35 +31,34 @@ const About = () => {
         ></div>
         <MaskContainer
           revealText={
-            <p className="mx-auto max-w-screen-lg text-center xl:text-xl font-bold text-base">
-              <span className="hidden sm:block text-5xl">...</span>
-              <br className="hidden sm:block" />
-              Marija Bajo is a performing artist, dedicated to bringing creative
-              concepts to life on stage. As an artist, her intention is to bring
-              a fresh perspective to the classical and contemporary realms of
-              music.
-              <br />
-              <br />
-              She comes from a small place in Bosnia and Herzegovina (BiH) where
-              her upbringing was closely tied to music education. Growing up
-              there, she hardly cared for the harsh post-war surroundings,
-              focusing solely on the imagination she had for art.
-              <br />
-              <br />
-              Marija Bajo works in the field of culture as an organizer, event
-              manager, pianist, dance accompanist and piano teacher. Her
-              specialty is work in festival organization. She actively worked in
-              a variety of festivals for more than ten years, and from 2022 she
-              dedicated herself to her own art and production.
+            <p className="mx-auto max-w-screen-lg text-center xl:text-xl font-bold text-base flex flex-col gap-12 2xl:gap-28">
+              <span className="text-5xl">...</span>
+              {aboutDescs?.map((desc, idx) => (
+                <span key={desc + idx} className="">
+                  {desc}
+                </span>
+              ))}
+              <FontAwesomeIcon
+                size="2x"
+                className=" 2xl:mt-28"
+                style={{
+                  color: "rgb(127 29 29)",
+                }}
+                icon={faMagnifyingGlass}
+              />
             </p>
           }
         >
           <blockquote>
             <q className="">
-              A change in cadence. The inside was visible on our faces, if we
-              knew
-              <span className="text-red-500 font-bold"> where to look</span>.
-              But we’ve caked the mirrors, aren’t we pretty?
+              {aboutHidden?.map((hiddenText, idx) => (
+                <span
+                  key={hiddenText + idx}
+                  className="even:text-red-500 even:font-extrabold"
+                >
+                  {hiddenText}
+                </span>
+              ))}
             </q>
           </blockquote>
         </MaskContainer>

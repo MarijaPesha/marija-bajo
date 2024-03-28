@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import React, { useEffect, useRef, useState } from "react";
 import { cn } from "../utils/cn";
 
 export const MaskContainer = ({
@@ -41,7 +41,7 @@ export const MaskContainer = ({
       ref={containerRef}
       className={cn("md:w-full 2xl:w-1/3 relative", className)}
       style={{
-        backgroundColor: `${isHovered ? "bg-[#0d0d0d]" : "white"} `,
+        backgroundColor: `${isHovered ? "bg-[#02021E]" : "white"} `,
       }}
       transition={{ duration: 0.5 }}
     >
@@ -63,14 +63,14 @@ export const MaskContainer = ({
           onMouseLeave={() => {
             setIsHovered(false);
           }}
-          className="max-w-screen-md px-6 text-center text-[#0d0d0d] text-lg font-bold relative z-20"
+          className="max-w-screen-md px-6 text-center text-[#02021E] text-lg font-bold relative z-20"
         >
           {children}
         </div>
       </motion.div>
       <div
         // items-center
-        className="w-full text-center px-6 h-full pt-4 flex justify-center text-[#ececec] bg-[#0d0d0d]"
+        className="w-full text-center px-6 h-full pt-4 flex justify-center text-[#ececec] bg-[#02021E]"
       >
         {revealText}
       </div>
