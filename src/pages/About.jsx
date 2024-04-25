@@ -31,8 +31,7 @@ const About = () => {
         ></div>
         <MaskContainer
           revealText={
-            <p className="mx-auto max-w-screen-lg text-center xl:text-xl font-bold text-base flex flex-col gap-12 2xl:gap-28">
-              <span className="text-5xl">...</span>
+            <p className="mt-10 mx-auto max-w-screen-lg text-center xl:text-xl font-bold text-base flex flex-col gap-12 2xl:gap-28">
               {aboutDescs?.map((desc, idx) => (
                 <span key={desc + idx} className="">
                   {desc}

@@ -1,5 +1,5 @@
 import { faLinkedin, faYoutube } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faUserPen } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -96,7 +96,7 @@ function Nav() {
         <Link to="/about" className="block md:hidden">
           <FontAwesomeIcon
             size="lg"
-            icon={faUserPen}
+            icon={faUser}
             style={{
               color: "#bcbcbb",
             }}
