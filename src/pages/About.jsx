@@ -1,8 +1,9 @@
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../App.css";
-import aboutPiano from "../assets/img/about_02.jpg";
+import aboutPianoNewTwo from "../assets/img/about_new_02.jpg";
+import aboutPianoNewOne from "../assets/img/about_new_01.jpg";
 import Nav from "../components/Nav";
 import { MaskContainer } from "../components/SvgMaskEffect";
 import { translations } from "../data/translations";
@@ -10,12 +11,24 @@ import { useLanguage } from "../store/LanguageContextProvider";
 
 const About = () => {
   const { language } = useLanguage();
+  const [currentImage, setCurrentImage] = useState(aboutPianoNewOne);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prevImage) =>
+        prevImage === aboutPianoNewOne ? aboutPianoNewTwo : aboutPianoNewOne
+      );
+    }, 6000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const containerStyle = {
-    backgroundImage: `url(${aboutPiano})`,
+    backgroundImage: `url(${currentImage})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
+    transition: "background-image 1s ease-in-out",
   };
 
   const aboutDescs = translations?.[language]?.about?.desc;
