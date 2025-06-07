@@ -26,6 +26,8 @@ export const translations = {
       emailPlaceholder: "Your Email Address",
       messagePlaceholder: "Message",
     },
+    spite:
+      "The Premiere in Travnik, Bosnia and Herzegovina, on 7th September 2024",
   },
   //
   bhs: {
@@ -55,5 +57,6 @@ export const translations = {
       emailPlaceholder: "Vaša Email Adresa",
       messagePlaceholder: "Poruka",
     },
+    spite: "Premijera u Travniku, BiH, 7.9.2024.",
   },
 };

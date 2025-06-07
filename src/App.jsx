@@ -2,6 +2,7 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import LanguageContextProvider from "../src/store/LanguageContextProvider";
 import About from "./pages/About";
 import GetInTouch from "./pages/GetInTouch";
+import Spite from "./pages/Spite";
 import Home from "./pages/Home";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/get-in-touch" element={<GetInTouch />} />
+          <Route path="/spite" element={<Spite />} />
           <Route path="*" element={<div>No Match</div>} />
         </Routes>
       </HashRouter>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CaruselTitel = ({ isPlaying, title }) => {
   return (
@@ -9,7 +10,12 @@ const CaruselTitel = ({ isPlaying, title }) => {
           : "opacity-100 text-[#ececec] transition ease-in-out hover:scale-105"
       }`}
     >
-      <span>{title}</span>
+      <Link
+        className="hover:text-red-900 transition duration-300 ease-in-out"
+        to="/spite"
+      >
+        {title}
+      </Link>
     </div>
   );
 };
