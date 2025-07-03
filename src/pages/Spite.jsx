@@ -11,9 +11,15 @@ import {
 import { useLanguage } from "../store/LanguageContextProvider";
 import { translations } from "../data/translations";
 
-const images = Object.values(
+const images = Object.entries(
   import.meta.glob("../assets/img/travnik/*.jpg", { eager: true, as: "url" })
-);
+)
+  .sort(([a], [b]) => {
+    const numA = parseInt(a.match(/\/(\d+)\s/)[1], 10);
+    const numB = parseInt(b.match(/\/(\d+)\s/)[1], 10);
+    return numA - numB;
+  })
+  .map(([, url]) => url);
 
 function Spite() {
   const [isOpen, setIsOpen] = useState(false);
