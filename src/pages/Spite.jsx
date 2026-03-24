@@ -26,6 +26,7 @@ function Spite() {
   const [fullscreenIndex, setFullscreenIndex] = useState(null);
   const { language } = useLanguage();
   const spite = translations[language].spite;
+  const galleryLabel = translations[language].galleryLabel;
 
   const openGallery = () => setIsOpen(true);
   const closeGallery = () => setIsOpen(false);
@@ -36,6 +37,7 @@ function Spite() {
     e.stopPropagation();
     setFullscreenIndex((i) => (i === 0 ? images.length - 1 : i - 1));
   };
+
   const nextImage = (e) => {
     e.stopPropagation();
     setFullscreenIndex((i) => (i === images.length - 1 ? 0 : i + 1));
@@ -43,10 +45,13 @@ function Spite() {
 
   return (
     <div className="flex flex-col h-screen bg-[#02021e]">
-      {/* Back dugme u gornjem levom uglu */}
+
+      {/* Back dugme */}
       <Link to="/" className="absolute top-4 left-4 text-white text-2xl z-50">
         <FontAwesomeIcon icon={faBackwardStep} />
       </Link>
+
+      {/* Video */}
       <div className="h-1/2 w-full bg-black flex items-center justify-center">
         <div className="w-2/3 h-full">
           <iframe
@@ -59,6 +64,7 @@ function Spite() {
         </div>
       </div>
 
+      {/* Galerija thumbnail */}
       <div className="h-1/2 flex items-center justify-center p-4">
         <div className="relative w-1/3 cursor-pointer" onClick={openGallery}>
           <img
@@ -66,14 +72,20 @@ function Spite() {
             alt="Klikni za galeriju"
             className="w-full rounded-lg shadow-md object-cover"
           />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="bg-black hover:bg-white/30 bg-opacity-30 backdrop-blur-sm text-white text-center px-4 py-2 rounded text-2xl font-semibold hover:text-red-900 transition duration-300 ease-in-out">
-              {spite}
+          <div className="absolute inset-0 flex flex-col items-center justify-center">
+            <div className="bg-black bg-opacity-30 backdrop-blur-sm text-center px-4 py-2 rounded">
+              <p className="text-white/60 uppercase tracking-widest text-2xl mb-1 font-light">
+                {galleryLabel}
+              </p>
+              <p className="text-white text-2xl font-semibold hover:text-red-900 transition duration-300 ease-in-out">
+                {spite}
+              </p>
             </div>
           </div>
         </div>
       </div>
 
+      {/* Modal galerija */}
       <Modal isOpen={isOpen} onClose={closeGallery}>
         <h2 className="text-2xl font-semibold mb-4 text-center">{spite}</h2>
         <div className="max-h-[60vh] overflow-y-auto pr-2">
@@ -91,6 +103,7 @@ function Spite() {
         </div>
       </Modal>
 
+      {/* Fullscreen prikaz */}
       {fullscreenIndex !== null && (
         <div
           className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50"
@@ -121,6 +134,7 @@ function Spite() {
           </button>
         </div>
       )}
+
     </div>
   );
 }

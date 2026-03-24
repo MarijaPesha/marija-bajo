@@ -1,12 +1,16 @@
 import { useEffect, useState } from "react";
 
-export const useCarousel = ({ images, slideInterval }) => {
+export const useCarousel = ({ images, slideInterval, sceneIndex }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
 
+  useEffect(() => {
+    setCurrentIndex(0);
+    setIsPlaying(true);
+  }, [sceneIndex]);
+
   const handleNext = () => {
     if (currentIndex === images.length - 1) {
-      // If at the last image, stop the interval
       setIsPlaying(false);
     } else {
       setCurrentIndex((prevIndex) => prevIndex + 1);
@@ -17,7 +21,7 @@ export const useCarousel = ({ images, slideInterval }) => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
-    setIsPlaying(true); // Resume playing when going back to a previous image
+    setIsPlaying(true);
   };
 
   useEffect(() => {

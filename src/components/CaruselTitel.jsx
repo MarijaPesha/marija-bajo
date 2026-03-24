@@ -1,10 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+const titleToRoute = {
+  "Spite the Shadows": "/spite",
+  "U inat tami": "/spite",
+  "In Memoriam Actualis": "/memoriam",
+};
+
 const CaruselTitel = ({ isPlaying, title }) => {
+  const route = titleToRoute[title] ?? "/";
+
   return (
     <div
-      className={`carusel-titel grid place-items-start px-4 py-6 sm:px-8 sm:py-12 text-3xl sm:text-6xl font-semibold ${
+      className={`text-base sm:text-2xl lg:text-4xl xl:text-6xl font-semibold whitespace-nowrap ${
         isPlaying
           ? "opacity-50 text-[#9b9b9b]"
           : "opacity-100 text-[#ececec] transition ease-in-out hover:scale-105"
@@ -12,7 +20,7 @@ const CaruselTitel = ({ isPlaying, title }) => {
     >
       <Link
         className="hover:text-red-900 transition duration-300 ease-in-out"
-        to="/spite"
+        to={route}
       >
         {title}
       </Link>

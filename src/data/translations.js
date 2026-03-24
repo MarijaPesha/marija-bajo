@@ -3,7 +3,7 @@ export const translations = {
     nav: [[".MARIJA_BAJO", ".MCMLXXXIX"], "about", "contact"],
     home: {
       title: "Spite the Shadows",
-      desc: "Spite the Shadows is a project that tells a story about the (non)culture of remembrance regarding the 1990’s Bosnian War through a multimedia performance. This multimedia performance aims to unify a diversity of different artistic expressions with music as the most dominant form.Along with the performance of piano pieces, elements of recitation drawn from factual historic documentation of war crimes, a projection of photographs, and audio samples will be presented. The idea for the project originated during Beethoven’s 250th birthday anniversary in Bonn. Bajo was inspired by Beethoven’s struggle. Despite suffering from deafness, he composed the Ode to Joy, a profoundly human achievement that resonated deeply with her, particularly in light of the modern history of her country and the broader human experience. His ordeal made her realize the significance of conveying historical truths through music in a fresh manner. Subsequently, she followed various cues, such as meeting Josip Magdic in Zagreb, who provided her with the music sheet for War Picture Postcards from Sarajevo and shared its backstory. Her performance then gradually evolved, shaping the form it now embodies.",
+      desc: "Spite the Shadows is a project that tells a story about the (non)culture of remembrance regarding the 1990's Bosnian War through a multimedia performance. This multimedia performance aims to unify a diversity of different artistic expressions with music as the most dominant form.Along with the performance of piano pieces, elements of recitation drawn from factual historic documentation of war crimes, a projection of photographs, and audio samples will be presented. The idea for the project originated during Beethoven's 250th birthday anniversary in Bonn. Bajo was inspired by Beethoven's struggle. Despite suffering from deafness, he composed the Ode to Joy, a profoundly human achievement that resonated deeply with her, particularly in light of the modern history of her country and the broader human experience. His ordeal made her realize the significance of conveying historical truths through music in a fresh manner. Subsequently, she followed various cues, such as meeting Josip Magdic in Zagreb, who provided her with the music sheet for War Picture Postcards from Sarajevo and shared its backstory. Her performance then gradually evolved, shaping the form it now embodies.",
     },
     about: {
       desc: [
@@ -13,7 +13,7 @@ export const translations = {
       hidden: [
         "A change in cadence. The inside was visible on our faces, ",
         "if we knew how to look.",
-        " But we’ve caked the mirrors, aren’t we pretty?",
+        " But we've caked the mirrors, aren't we pretty?",
       ],
     },
     contact: {
@@ -26,10 +26,14 @@ export const translations = {
       emailPlaceholder: "Your Email Address",
       messagePlaceholder: "Message",
     },
-    spite:
-      "The Premiere in Travnik, Bosnia and Herzegovina, on 7th September 2024",
+    spite: "Travnik, Bosnia and Herzegovina, on 7th September 2024",
+    galleryLabel: "Photo Gallery",
+    memoriam: {
+      sarajevo: "Sarajevo, Bosnia and Herzegovina, 5th July, 2025",
+      zagreb: "Zagreb, Croatia, 20th October, 2025",
+    },
   },
-  //
+
   bhs: {
     nav: [[".MARIJA_BAJO", ".MCMLXXXIX"], "o autorici", "kontakt"],
     home: {
@@ -58,5 +62,10 @@ export const translations = {
       messagePlaceholder: "Poruka",
     },
     spite: "Premijera u Travniku, BiH, 7.9.2024.",
+    galleryLabel: "Foto Galerija",
+    memoriam: {
+      sarajevo: "Sarajevo, Bosna i Hercegovina, 5.7.2025.",
+      zagreb: "Zagreb, Hrvatska, 20.10.2025.",
+    },
   },
 };
